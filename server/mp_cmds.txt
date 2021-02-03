@@ -1,0 +1,7 @@
+
+
+
+pipenv --python 3.9
+# enter env 
+pipenv shell
+pipenv install django==3.1.5 djangorestframework==3.12.2
