@@ -1,3 +1,6 @@
-#django
+# django
 Django==3.1.1
 djangorestframework==3.11.1
+
+# postgres database
+psycopg2-binary==2.8.6

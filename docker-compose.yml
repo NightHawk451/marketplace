@@ -11,3 +11,17 @@ services:
       - 8002:8000
     env_file:
       - ./server/.env.dev
+    depends_on:
+      - marketplace-db
+  marketplace-db:
+    container_name: marketplace-db
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=a_marketplace
+      - POSTGRES_PASSWORD=asecetpass
+      - POSTGRES_DB=marketplace_db
+
+volumes:
+  postgres_data:
