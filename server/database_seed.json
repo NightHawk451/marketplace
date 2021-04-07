@@ -1,1 +1,61 @@
-[{"model": "products.product", "pk": 1, "fields": {"title": "Mask", "description": "Face Mask", "price": "5.00", "created_dt": "2021-02-15T01:23:07.564Z", "updated_ts": "2021-02-15T01:23:07.564Z"}}, {"model": "products.product", "pk": 2, "fields": {"title": "Picture", "description": "A beautiful sunset", "price": "10.00", "created_dt": "2021-02-15T01:23:37.904Z", "updated_ts": "2021-02-15T01:23:37.904Z"}}]
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$YjRkIaYV25Em$tTLwoq7TTxr58pInmeu0K/R4nfjhJyITTA92VODBJ9s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "turing@gmail.com",
+    "first_name": "alan",
+    "last_name": "turing",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-06T02:18:46.862Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$u8lDSKx1Muac$DBnNLKlIdJUyE9DVyGKRUUn85I7xZXEPPINEbQ/cPkc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "gottfried@leibniz.com",
+    "first_name": "gottfried",
+    "last_name": "leibniz",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-06T02:18:51.533Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "uploaded_by": 1,
+    "title": "Mask",
+    "description": "Face Mask",
+    "price": "5.00",
+    "created_dt": "2021-02-15T01:23:07.564Z",
+    "updated_ts": "2021-02-15T01:23:07.564Z"
+  }
+}, {
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "uploaded_by": 1,
+    "title": "Picture",
+    "description": "A beautiful sunset",
+    "price": "10.00",
+    "created_dt": "2021-02-15T01:23:37.904Z",
+    "updated_ts": "2021-02-15T01:23:37.904Z"
+  }
+}
+]
