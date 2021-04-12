@@ -18,5 +18,4 @@ class Product(models.Model):
 
     @property
     def owner(self):
-        print('we are here')
         return self.uploaded_by
