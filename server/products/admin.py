@@ -4,8 +4,8 @@ from .models import Product
 
 
 class ProductAdmin(admin.ModelAdmin):
-    fields = ("title", "description", "price", "created_dt", "updated_ts")
-    list_display = ("title", "description", "price", "created_dt", "updated_ts")
+    fields = ("uploaded_by", "title", "description", "price", "created_dt", "updated_ts")
+    list_display = ("uploaded_by","title", "description", "price", "created_dt", "updated_ts")
     readonly_fields = ("created_dt", "updated_ts")
 
     class Meta:
