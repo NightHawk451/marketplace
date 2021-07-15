@@ -5,3 +5,7 @@ djangorestframework-simplejwt==4.6.0
 
 # postgres database
 psycopg2-binary==2.8.6
+
+# images
+pillow==8.2.0
+

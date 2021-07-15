@@ -5,6 +5,10 @@ User = settings.AUTH_USER_MODEL
 
 # Create your models here.
 
+def upload_file_path(instance, filename):
+    return f"product_photo/{instance.product.pk}/{filename}"
+
+
 class Product(models.Model):
     uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=120)
@@ -19,3 +23,17 @@ class Product(models.Model):
     @property
     def owner(self):
         return self.uploaded_by
+
+class Images(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(upload_to=upload_file_path, null=True, blank=True)
+    created_dt = models.DateTimeField(auto_now_add=True)
+    updated_ts = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        old = Images.objects.filter(pk=self.pk).first()
+        if old:
+            """Delete the old image upon change"""
+            if old.image != self.image and old.image:
+                old.image.delete(save=False)
+        super(Images, self).save(*args, **kwargs)

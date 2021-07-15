@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from .models import Product
+from .models import Images, Product
+
+class ImagesInline(admin.TabularInline):
+    fields = ("image",)
+    readonly_fields = ("created_dt", "updated_ts",)
+    model = Images
+    extra = 0
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -10,5 +16,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     class Meta:
 		    model = Product
+    
+    inlines = [ImagesInline]
 
 admin.site.register(Product, ProductAdmin)
