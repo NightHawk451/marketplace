@@ -9,3 +9,8 @@ psycopg2-binary==2.8.6
 # images
 pillow==8.2.0
 
+# to use s3
+django-storages==1.11.1
+
+# interact with aws api
+boto3==1.18.1
